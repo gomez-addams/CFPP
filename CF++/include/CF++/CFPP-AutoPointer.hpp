@@ -33,8 +33,8 @@
  * @abstract    CoreFoundation++ auto-pointer for CF types
  */
 
-#ifndef CFPP_AUTO_POINTER_H
-#define CFPP_AUTO_POINTER_H
+#ifndef CFPP_AUTO_POINTER_HPP
+#define CFPP_AUTO_POINTER_HPP
 
 #include <vector>
 
@@ -69,4 +69,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_AUTO_POINTER_H */
+#endif /* CFPP_AUTO_POINTER_HPP */

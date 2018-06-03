@@ -33,8 +33,8 @@
  * @abstract    CoreFoundation++ generic wrapper for CF property list types
  */
 
-#ifndef CFPP_ANY_PROPERTY_LIST_TYPE_H
-#define CFPP_ANY_PROPERTY_LIST_TYPE_H
+#ifndef CFPP_ANY_PROPERTY_LIST_TYPE_HPP
+#define CFPP_ANY_PROPERTY_LIST_TYPE_HPP
 
 namespace CF
 {
@@ -74,4 +74,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_ANY_PROPERTY_LIST_TYPE_H */
+#endif /* CFPP_ANY_PROPERTY_LIST_TYPE_HPP */

@@ -33,8 +33,8 @@
  * @abstract    CoreFoundation++ CFNumberRef wrapper
  */
 
-#ifndef CFPP_NUMBER_H
-#define CFPP_NUMBER_H
+#ifndef CFPP_NUMBER_HPP
+#define CFPP_NUMBER_HPP
 
 #include <stdint.h>
 
@@ -589,4 +589,4 @@ namespace CF
 #pragma clang diagnostic pop
 #endif
 
-#endif /* CFPP_NUMBER_H */
+#endif /* CFPP_NUMBER_HPP */

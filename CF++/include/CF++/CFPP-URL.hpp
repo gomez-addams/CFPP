@@ -33,8 +33,8 @@
  * @abstract    CoreFoundation++ CFURLRef wrapper
  */
 
-#ifndef CFPP_URL_H
-#define CFPP_URL_H
+#ifndef CFPP_URL_HPP
+#define CFPP_URL_HPP
 
 namespace CF
 {
@@ -150,4 +150,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_URL_H */
+#endif /* CFPP_URL_HPP */

@@ -33,8 +33,8 @@
  * @abstract    CoreFoundation++ CFDataRef wrapper
  */
 
-#ifndef CFPP_DATA_H
-#define CFPP_DATA_H
+#ifndef CFPP_DATA_HPP
+#define CFPP_DATA_HPP
 
 namespace CF
 {
@@ -142,4 +142,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_DATA_H */
+#endif /* CFPP_DATA_HPP */
