@@ -48,7 +48,7 @@ namespace CF
             
             url = CFURLCreateWithFileSystemPath
             (
-                static_cast< CFAllocatorRef >( NULL ),
+                static_cast< CFAllocatorRef >( nullptr ),
                 str,
                 #ifdef _WIN32
                 kCFURLWindowsPathStyle,
@@ -61,7 +61,7 @@ namespace CF
             return url.As< CF::URL >();
         }
         
-        return static_cast< CFURLRef >( NULL );
+        return static_cast< CFURLRef >( nullptr );
     }
     
     URL URL::FileSystemURL( const char * path, bool isDir )
@@ -91,26 +91,26 @@ namespace CF
         return URL::FileSystemURL( str.GetValue(), isDir );
     }
     
-    URL::URL( void ): _cfObject( NULL )
+    URL::URL( void ): _cfObject( nullptr )
     {}
     
-    URL::URL( const URL & value ): _cfObject( NULL )
+    URL::URL( const URL & value ): _cfObject( nullptr )
     {
-        if( value._cfObject != NULL )
+        if( value._cfObject != nullptr )
         {
             this->_cfObject = static_cast< CFURLRef >( CFRetain( value._cfObject ) );
         }
     }
     
-    URL::URL( CFTypeRef value ): _cfObject( NULL )
+    URL::URL( CFTypeRef value ): _cfObject( nullptr )
     {
-        if( value != NULL && CFGetTypeID( value ) == this->GetTypeID() )
+        if( value != nullptr && CFGetTypeID( value ) == this->GetTypeID() )
         {
             this->_cfObject = static_cast< CFURLRef >( CFRetain( value ) );
         }
     }
     
-    URL::URL( const AutoPointer & value ): _cfObject( NULL )
+    URL::URL( const AutoPointer & value ): _cfObject( nullptr )
     {
         if( value.IsValid() && value.GetTypeID() == this->GetTypeID() )
         {
@@ -118,15 +118,15 @@ namespace CF
         }
     }
     
-    URL::URL( CFURLRef value ): _cfObject( NULL )
+    URL::URL( CFURLRef value ): _cfObject( nullptr )
     {
-        if( value != NULL && CFGetTypeID( value ) == this->GetTypeID() )
+        if( value != nullptr && CFGetTypeID( value ) == this->GetTypeID() )
         {
             this->_cfObject = static_cast< CFURLRef >( CFRetain( value ) );
         }
     }
     
-    URL::URL( CFStringRef value ): _cfObject( NULL )
+    URL::URL( CFStringRef value ): _cfObject( nullptr )
     {
         String s;
         
@@ -134,11 +134,11 @@ namespace CF
         
         if( s.GetLength() > 0 )
         {
-            this->_cfObject = CFURLCreateWithString( static_cast< CFAllocatorRef >( NULL ), static_cast< CFStringRef >( s ), NULL );
+            this->_cfObject = CFURLCreateWithString( static_cast< CFAllocatorRef >( nullptr ), static_cast< CFStringRef >( s ), nullptr );
         }
     }
     
-    URL::URL( const std::string & value ): _cfObject( NULL )
+    URL::URL( const std::string & value ): _cfObject( nullptr )
     {
         String s;
         
@@ -146,11 +146,11 @@ namespace CF
         
         if( s.GetLength() > 0 )
         {
-            this->_cfObject = CFURLCreateWithString( static_cast< CFAllocatorRef >( NULL ), static_cast< CFStringRef >( s ), NULL );
+            this->_cfObject = CFURLCreateWithString( static_cast< CFAllocatorRef >( nullptr ), static_cast< CFStringRef >( s ), nullptr );
         }
     }
     
-    URL::URL( const char * value ): _cfObject( NULL )
+    URL::URL( const char * value ): _cfObject( nullptr )
     {
         String s;
         
@@ -158,7 +158,7 @@ namespace CF
         
         if( s.GetLength() > 0 )
         {
-            this->_cfObject = CFURLCreateWithString( static_cast< CFAllocatorRef >( NULL ), static_cast< CFStringRef >( s ), NULL );
+            this->_cfObject = CFURLCreateWithString( static_cast< CFAllocatorRef >( nullptr ), static_cast< CFStringRef >( s ), nullptr );
         }
     }
     
@@ -236,7 +236,7 @@ namespace CF
         std::string url1;
         std::string url2;
         
-        if( this->_cfObject == NULL || value._cfObject == NULL )
+        if( this->_cfObject == nullptr || value._cfObject == nullptr )
         {
             return false;
         }
@@ -327,7 +327,7 @@ namespace CF
     {
         String str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.GetValue();
         }
@@ -352,7 +352,7 @@ namespace CF
         AutoPointer    str;
         CFURLPathStyle cfPathStyle;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -367,12 +367,12 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
         
-        str = CFURLCopyFragment( this->_cfObject, NULL );
+        str = CFURLCopyFragment( this->_cfObject, nullptr );
         
         return str.As< CFStringRef >();
     }
@@ -381,7 +381,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -395,7 +395,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -409,7 +409,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -423,12 +423,12 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
         
-        str = CFURLCopyParameterString( this->_cfObject, NULL );
+        str = CFURLCopyParameterString( this->_cfObject, nullptr );
         
         return str.As< CFStringRef >();
     }
@@ -437,7 +437,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -451,7 +451,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -465,7 +465,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -479,12 +479,12 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
         
-        str = CFURLCopyQueryString( this->_cfObject, NULL );
+        str = CFURLCopyQueryString( this->_cfObject, nullptr );
         
         return str.As< CFStringRef >();
     }
@@ -493,7 +493,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -507,7 +507,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -521,12 +521,12 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
         
-        str = CFURLCopyStrictPath( this->_cfObject, NULL );
+        str = CFURLCopyStrictPath( this->_cfObject, nullptr );
         
         return str.As< CFStringRef >();
     }
@@ -535,7 +535,7 @@ namespace CF
     {
         AutoPointer str;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return str.As< CFStringRef >();
         }
@@ -549,7 +549,7 @@ namespace CF
     {
         Number n;
         
-        if( this->_cfObject != NULL )
+        if( this->_cfObject != nullptr )
         {
             n.SetSignedIntValue( CFURLGetPortNumber( this->_cfObject ) );
         }
@@ -559,7 +559,7 @@ namespace CF
     
     bool URL::HasDirectoryPath( void ) const
     {
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return false;
         }
@@ -571,7 +571,7 @@ namespace CF
     {
         CFURLRef url;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return;
         }
@@ -579,7 +579,7 @@ namespace CF
         url             = this->_cfObject;
         this->_cfObject = CFURLCreateCopyAppendingPathComponent
         (
-            static_cast< CFAllocatorRef >( NULL ),
+            static_cast< CFAllocatorRef >( nullptr ),
             url,
             component,
             isDirectory
@@ -610,7 +610,7 @@ namespace CF
     {
         CFURLRef url;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return;
         }
@@ -618,7 +618,7 @@ namespace CF
         url             = this->_cfObject;
         this->_cfObject = CFURLCreateCopyAppendingPathExtension
         (
-            static_cast< CFAllocatorRef >( NULL ),
+            static_cast< CFAllocatorRef >( nullptr ),
             url,
             extension
         );
@@ -648,7 +648,7 @@ namespace CF
     {
         CFURLRef url;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return;
         }
@@ -656,7 +656,7 @@ namespace CF
         url             = this->_cfObject;
         this->_cfObject = CFURLCreateCopyDeletingLastPathComponent
         (
-            static_cast< CFAllocatorRef >( NULL ),
+            static_cast< CFAllocatorRef >( nullptr ),
             url
         );
         
@@ -667,7 +667,7 @@ namespace CF
     {
         CFURLRef url;
         
-        if( this->_cfObject == NULL )
+        if( this->_cfObject == nullptr )
         {
             return;
         }
@@ -675,7 +675,7 @@ namespace CF
         url             = this->_cfObject;
         this->_cfObject = CFURLCreateCopyDeletingPathExtension
         (
-            static_cast< CFAllocatorRef >( NULL ),
+            static_cast< CFAllocatorRef >( nullptr ),
             url
         );
         
