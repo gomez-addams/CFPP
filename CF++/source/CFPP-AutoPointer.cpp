@@ -61,16 +61,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    AutoPointer::~AutoPointer( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     AutoPointer & AutoPointer::operator = ( AutoPointer value )
     {
         swap( *( this ), value );

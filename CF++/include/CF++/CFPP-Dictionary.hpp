@@ -53,8 +53,6 @@ namespace CF
             Dictionary( std::initializer_list< Pair > value );
             Dictionary( Dictionary && value );
             
-            virtual ~Dictionary( void );
-            
             Dictionary & operator = ( Dictionary value );
             Dictionary & operator = ( const AutoPointer & value );
             Dictionary & operator = ( CFTypeRef value );

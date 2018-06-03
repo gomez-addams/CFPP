@@ -92,16 +92,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Date::~Date( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     Date & Date::operator = ( Date value )
     {
         swap( *( this ), value );

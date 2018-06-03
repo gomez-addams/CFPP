@@ -55,8 +55,6 @@ namespace CF
             String( const String & value );
             String( String && value );
             
-            virtual ~String( void );
-            
             String & operator = ( String value );
             String & operator = ( const AutoPointer & value );
             String & operator = ( CFTypeRef value );

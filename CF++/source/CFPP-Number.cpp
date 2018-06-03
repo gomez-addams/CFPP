@@ -576,16 +576,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Number::~Number( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     Number & Number::operator = ( Number value )
     {
         swap( *( this ), value );

@@ -141,16 +141,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    String::~String( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     String & String::operator = ( String value )
     {
         swap( *( this ), value );

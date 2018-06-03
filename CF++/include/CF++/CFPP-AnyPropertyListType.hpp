@@ -54,8 +54,6 @@ namespace CF
             AnyPropertyListType( CFTypeRef value, PropertyListFormat format );
             AnyPropertyListType( AnyPropertyListType && value );
             
-            virtual ~AnyPropertyListType( void );
-            
             AnyPropertyListType & operator = ( AnyPropertyListType value );
             AnyPropertyListType & operator = ( const AutoPointer & value );
             AnyPropertyListType & operator = ( CFTypeRef value );

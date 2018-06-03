@@ -52,8 +52,6 @@ namespace CF
             WriteStream( CFWriteStreamRef value );
             WriteStream( WriteStream && value );
             
-            virtual ~WriteStream( void );
-            
             WriteStream & operator = ( WriteStream value );
             WriteStream & operator = ( const AutoPointer & value );
             WriteStream & operator = ( CFTypeRef value );

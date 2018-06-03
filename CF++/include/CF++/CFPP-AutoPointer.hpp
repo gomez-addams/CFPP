@@ -49,8 +49,6 @@ namespace CF
             AutoPointer( CFTypeRef value );
             AutoPointer( AutoPointer && value );
             
-            virtual ~AutoPointer( void );
-            
             AutoPointer & operator = ( AutoPointer value );
             AutoPointer & operator = ( CFTypeRef value );
                         

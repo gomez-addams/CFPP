@@ -226,16 +226,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Array::~Array( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     Array & Array::operator = ( Array value )
     {
         swap( *( this ), value );

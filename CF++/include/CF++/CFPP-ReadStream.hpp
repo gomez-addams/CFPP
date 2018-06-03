@@ -52,8 +52,6 @@ namespace CF
             ReadStream( CFReadStreamRef value );
             ReadStream( ReadStream && value );
             
-            virtual ~ReadStream( void );
-            
             ReadStream & operator = ( ReadStream value );
             ReadStream & operator = ( const AutoPointer & value );
             ReadStream & operator = ( CFTypeRef value );

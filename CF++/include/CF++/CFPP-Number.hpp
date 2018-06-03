@@ -104,8 +104,6 @@ namespace CF
             Number( double value );
             Number( Number && value );
             
-            virtual ~Number( void );
-            
             Number & operator = ( Number value );
             Number & operator = ( const AutoPointer & value );
             Number & operator = ( CFTypeRef value );

@@ -168,16 +168,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    URL::~URL( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     URL & URL::operator = ( URL value )
     {
         swap( *( this ), value );

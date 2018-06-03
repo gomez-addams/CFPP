@@ -38,7 +38,16 @@
 namespace CF
 {
     Type::~Type( void )
-    {}
+    {
+        /*
+        CFTypeRef o( this->GetCFObject() );
+        
+        if( o != NULL )
+        {
+            CFRelease( o );
+        }
+        */
+    }
     
     bool Type::operator == ( const Type & value ) const
     {

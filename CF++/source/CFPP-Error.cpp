@@ -182,17 +182,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Error::~Error( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    
-    }
-    
     Error & Error::operator = ( Error value )
     {
         swap( *( this ), value );

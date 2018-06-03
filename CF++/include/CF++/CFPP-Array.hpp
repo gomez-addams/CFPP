@@ -53,8 +53,6 @@ namespace CF
             Array( std::initializer_list< CFTypeRef > value );
             Array( Array && value );
             
-            virtual ~Array( void );
-            
             Array & operator = ( Array value );
             Array & operator = ( const AutoPointer & value );
             Array & operator = ( CFTypeRef value );

@@ -136,16 +136,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    AnyPropertyListType::~AnyPropertyListType( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     AnyPropertyListType & AnyPropertyListType::operator = ( AnyPropertyListType value )
     {
         swap( *( this ), value );

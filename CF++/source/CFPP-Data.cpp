@@ -119,16 +119,6 @@ namespace CF
         this->_cfObject = value._cfObject;
         value._cfObject = nullptr;
     }
-    
-    Data::~Data( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
           
     Data & Data::operator = ( Data value )
     {

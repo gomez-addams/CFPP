@@ -52,8 +52,6 @@ namespace CF
             Boolean( bool value = false );
             Boolean( Boolean && value );
             
-            virtual ~Boolean( void );
-            
             Boolean & operator = ( Boolean value );
             Boolean & operator = ( const AutoPointer & value );
             Boolean & operator = ( CFTypeRef value );

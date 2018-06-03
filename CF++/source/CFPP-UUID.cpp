@@ -110,16 +110,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    UUID::~UUID( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     UUID & UUID::operator = ( UUID value )
     {
         swap( *( this ), value );

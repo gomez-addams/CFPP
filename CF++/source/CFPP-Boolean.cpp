@@ -178,16 +178,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Boolean::~Boolean( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     Boolean & Boolean::operator = ( Boolean value )
     {
         swap( *( this ), value );

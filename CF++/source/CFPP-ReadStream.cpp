@@ -101,16 +101,6 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    ReadStream::~ReadStream( void )
-    {
-        if( this->_cfObject != NULL )
-        {
-            CFRelease( this->_cfObject );
-            
-            this->_cfObject = NULL;
-        }
-    }
-    
     ReadStream & ReadStream::operator = ( ReadStream value )
     {
         swap( *( this ), value );

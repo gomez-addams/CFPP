@@ -56,8 +56,6 @@ namespace CF
             Data( std::initializer_list< Byte > value );
             Data( Data && value );
             
-            virtual ~Data( void );
-            
             Data & operator = ( Data value );
             Data & operator = ( const AutoPointer & value );
             Data & operator = ( CFTypeRef value );

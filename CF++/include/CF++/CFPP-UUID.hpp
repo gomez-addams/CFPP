@@ -51,8 +51,6 @@ namespace CF
             UUID( const Data & value );
             UUID( UUID && value );
             
-            virtual ~UUID( void );
-            
             UUID & operator = ( UUID value );
             UUID & operator = ( const AutoPointer & value );
             UUID & operator = ( CFTypeRef value );

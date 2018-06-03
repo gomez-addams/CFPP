@@ -57,8 +57,6 @@ namespace CF
             Error( const char * domain, CFIndex code, const Dictionary & userInfo );
             Error( Error && value );
             
-            virtual ~Error( void );
-            
             Error & operator = ( Error value );
             Error & operator = ( const AutoPointer & value );
             Error & operator = ( CFTypeRef value );
