@@ -92,7 +92,6 @@ TEST( CFPP_Array, CTOR_CFArray )
     ASSERT_FALSE( a3.IsValid() );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Array, CTOR_STDInitializerList )
 {
     CF::Array a
@@ -118,7 +117,6 @@ TEST( CFPP_Array, CTOR_STDInitializerList )
     ASSERT_TRUE( CF::Number( a[ 2 ] ) == 42 );
     ASSERT_TRUE( CF::String( a[ 3 ] ) == "hello, universe" );
 }
-#endif
 
 TEST( CFPP_Array, CCTOR )
 {
@@ -140,7 +138,6 @@ TEST( CFPP_Array, CCTOR )
     }
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Array, MCTOR )
 {
     CF::Array a1;
@@ -159,7 +156,6 @@ TEST( CFPP_Array, MCTOR )
         ASSERT_EQ( a2.GetCount(), 2 );
     }
 }
-#endif
 
 TEST( CFPP_Array, OperatorAssignArray )
 {

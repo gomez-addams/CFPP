@@ -92,7 +92,6 @@ TEST( CFPP_Dictionary, CTOR_CFDictionary )
     ASSERT_FALSE( d3.IsValid() );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Dictionary, CTOR_STDInitializerList )
 {
     CF::Dictionary d
@@ -109,7 +108,6 @@ TEST( CFPP_Dictionary, CTOR_STDInitializerList )
     ASSERT_TRUE( CF::String( d[ "foo" ] ) == "bar" );
     ASSERT_TRUE( CF::String( d[ "bar" ] ) == "foo" );
 }
-#endif
 
 TEST( CFPP_Dictionary, CCTOR )
 {
@@ -131,7 +129,6 @@ TEST( CFPP_Dictionary, CCTOR )
     }
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Dictionary, MCTOR )
 {
     CF::Dictionary d1;
@@ -150,7 +147,6 @@ TEST( CFPP_Dictionary, MCTOR )
         ASSERT_EQ( d2.GetCount(), 2 );
     }
 }
-#endif
 
 TEST( CFPP_Dictionary, OperatorAssignDictionary )
 {

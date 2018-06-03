@@ -158,7 +158,6 @@ TEST( CFPP_Boolean, CCTOR )
     ASSERT_FALSE( b4.GetValue() );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Boolean, MCTOR )
 {
     CF::Boolean b1( true );
@@ -168,7 +167,6 @@ TEST( CFPP_Boolean, MCTOR )
     ASSERT_FALSE( b1.IsValid() );
     ASSERT_TRUE(  b2.GetValue() );
 }
-#endif
 
 TEST( CFPP_Boolean, OperatorAssignBoolean )
 {

@@ -230,7 +230,6 @@ TEST( CFPP_AnyPropertyListType, CTOR_CFTypeRef )
     ASSERT_TRUE(  p3.GetTypeID() == 0 );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_AnyPropertyListType, MCTOR )
 {
     CF::AnyPropertyListType p1( CF::Dictionary().GetCFObject(),      CF::PropertyListFormatXML );
@@ -268,7 +267,6 @@ TEST( CFPP_AnyPropertyListType, MCTOR )
         ASSERT_EQ( p4.GetFormat(), CF::PropertyListFormatBinary );
     }
 }
-#endif
 
 TEST( CFPP_AnyPropertyListType, OperatorAssign )
 {

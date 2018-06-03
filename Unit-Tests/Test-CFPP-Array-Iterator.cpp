@@ -110,7 +110,6 @@ TEST( CFPP_Array_Iterator, CCTOR )
     }
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Array_Iterator, MCTOR )
 {
     CF::Array a;
@@ -131,7 +130,6 @@ TEST( CFPP_Array_Iterator, MCTOR )
         ASSERT_TRUE( CF::String( *( i4 ) ) == "hello, world" );
     }
 }
-#endif
 
 TEST( CFPP_Array_Iterator, OperatorAssign )
 {
@@ -681,7 +679,6 @@ TEST( CFPP_Array_Iterator, TestIterate )
     }
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Array_Iterator, TestIterateSTD )
 {
     CF::Array           a1;
@@ -736,9 +733,7 @@ TEST( CFPP_Array_Iterator, TestIterateSTD )
         ASSERT_EQ( i, 4 );
     }
 }
-#endif
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Array_Iterator, TestIterateCPP11 )
 {
     CF::Array           a1;
@@ -797,4 +792,3 @@ TEST( CFPP_Array_Iterator, TestIterateCPP11 )
         ASSERT_EQ( i, 4 );
     }
 }
-#endif

@@ -122,7 +122,6 @@ TEST( CFPP_Pair, CCTOR )
     ASSERT_EQ( p1.GetValue(), p2.GetValue() );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Pair, MCTOR )
 {
     CF::Pair p1( "hello", "world" );
@@ -133,7 +132,6 @@ TEST( CFPP_Pair, MCTOR )
     ASSERT_FALSE( p2.GetKey()   == nullptr );
     ASSERT_FALSE( p2.GetValue() == nullptr );
 }
-#endif
 
 TEST( CFPP_Pair, OperatorAssign )
 {

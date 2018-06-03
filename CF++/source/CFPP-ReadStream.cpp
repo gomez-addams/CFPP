@@ -95,13 +95,11 @@ namespace CF
         }
     }
     
-    #ifdef CFPP_HAS_CPP11
     ReadStream::ReadStream( ReadStream && value )
     {
         this->_cfObject = value._cfObject;
         value._cfObject = nullptr;
     }
-    #endif
     
     ReadStream::~ReadStream( void )
     {

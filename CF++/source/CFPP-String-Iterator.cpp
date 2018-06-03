@@ -48,30 +48,12 @@ namespace CF
         _cfObject( value._cfObject ),
         _length( value._length ),
         _pos( value._pos ),
-        #ifdef CFPP_HAS_CPP11
         _cp( value._cp )
-        #else
-        _cp( NULL )
-        #endif
     {
         if( this->_cfObject != NULL )
         {
             CFRetain( this->_cfObject );
         }
-        
-        #ifndef CFPP_HAS_CPP11
-        
-        if( value._cp != NULL )
-        {
-            this->_cp = new char[ value._length + 1 ];
-            
-            if( this->_cp != NULL )
-            {
-                memcpy( this->_cp, value._cp, static_cast< std::size_t >( value._length + 1 ) );
-            }
-        }
-        
-        #endif
     }
     
     String::Iterator::Iterator( CFStringRef string, CFStringEncoding encoding, CFIndex length, CFIndex pos ):
@@ -89,8 +71,6 @@ namespace CF
                 
                 size = static_cast< std::size_t >( CFStringGetMaximumSizeForEncoding( CFStringGetLength( this->_cfObject ), encoding ) );
                 
-                #ifdef CFPP_HAS_CPP11
-                
                 this->_cp = std::shared_ptr< char >( new char[ size + 1 ] );
                 
                 if( this->_cp != nullptr )
@@ -98,23 +78,10 @@ namespace CF
                     memset( this->_cp.get(), 0, size + 1 );
                     CFStringGetCString( this->_cfObject, this->_cp.get(), static_cast< CFIndex >( length + 1 ), encoding );
                 }
-                
-                #else
-                
-                this->_cp = new char[ size + 1 ];
-                
-                if( this->_cp != NULL )
-                {
-                    memset( this->_cp, 0, size + 1 );
-                    CFStringGetCString( this->_cfObject, this->_cp, static_cast< CFIndex >( length + 1 ), encoding );
-                }
-                
-                #endif
             }
         }
     }
     
-    #ifdef CFPP_HAS_CPP11
     String::Iterator::Iterator( Iterator && value )
     {
         this->_cfObject = value._cfObject;
@@ -126,7 +93,6 @@ namespace CF
         this->_cp       = value._cp;
         value._cp       = nullptr;
     }
-    #endif
     
     String::Iterator::~Iterator( void )
     {
@@ -134,10 +100,6 @@ namespace CF
         {
             CFRelease( this->_cfObject );
         }
-        
-        #ifndef CFPP_HAS_CPP11
-        delete [] this->_cp;
-        #endif
     }
     
     String::Iterator & String::Iterator::operator = ( Iterator value )
@@ -258,11 +220,7 @@ namespace CF
             return 0;
         }
         
-        #ifdef CFPP_HAS_CPP11
         return this->_cp.get()[ this->_pos ];
-        #else
-        return this->_cp[ this->_pos ];
-        #endif
     }
     
     String::Iterator::operator char () const

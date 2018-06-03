@@ -50,10 +50,7 @@ namespace CF
             ReadStream( const AutoPointer & value );
             ReadStream( CFTypeRef value );
             ReadStream( CFReadStreamRef value );
-            
-            #ifdef CFPP_HAS_CPP11
             ReadStream( ReadStream && value );
-            #endif
             
             virtual ~ReadStream( void );
             
@@ -95,10 +92,7 @@ namespace CF
                     
                     Iterator( void );
                     Iterator( const Iterator & value );
-                    
-                    #ifdef CFPP_HAS_CPP11
                     Iterator( Iterator && value );
-                    #endif
                     
                     virtual ~Iterator( void );
                     

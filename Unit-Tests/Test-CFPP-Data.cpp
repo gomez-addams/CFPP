@@ -123,7 +123,6 @@ TEST( CFPP_Data, CTOR_BytePtr )
     ASSERT_FALSE( d2.IsValid() );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Data, CTOR_STDInitializerList )
 {
     CF::Data d( { 0xDE, 0xAD, 0xBE, 0xEF } );
@@ -136,7 +135,6 @@ TEST( CFPP_Data, CTOR_STDInitializerList )
     ASSERT_TRUE( d[ 2 ] == 0xBE );
     ASSERT_TRUE( d[ 3 ] == 0xEF );
 }
-#endif
 
 TEST( CFPP_Data, CCTOR )
 {
@@ -151,7 +149,6 @@ TEST( CFPP_Data, CCTOR )
     ASSERT_FALSE( d4.IsValid() );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_Data, MCTOR )
 {
     CF::Data d1;
@@ -164,7 +161,6 @@ TEST( CFPP_Data, MCTOR )
     ASSERT_TRUE(  d3.IsValid() );
     ASSERT_FALSE( d4.IsValid() );
 }
-#endif
 
 TEST( CFPP_Data, OperatorAssignData )
 {

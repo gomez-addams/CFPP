@@ -79,7 +79,6 @@ TEST( CFPP_AutoPointer, CCTOR )
     ASSERT_EQ( CFGetRetainCount( p2.GetCFObject() ), i + 1 );
 }
 
-#ifdef CFPP_HAS_CPP11
 TEST( CFPP_AutoPointer, MCTOR )
 {
     CFStringRef s;
@@ -94,7 +93,6 @@ TEST( CFPP_AutoPointer, MCTOR )
     ASSERT_EQ( p1.GetCFObject(), static_cast< CFTypeRef >( nullptr ) );
     ASSERT_EQ( p2.GetRetainCount(), i );
 }
-#endif
 
 TEST( CFPP_AutoPointer, DTOR )
 {
