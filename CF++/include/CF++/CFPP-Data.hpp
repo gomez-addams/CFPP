@@ -42,15 +42,7 @@ namespace CF
     {
         public:
             
-            #ifdef _WIN32
-            
-            typedef unsigned __int8 Byte;
-            
-            #else
-            
             typedef uint8_t Byte;
-            
-            #endif
             
             Data( void );
             Data( CFIndex capacity );
