@@ -40,7 +40,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT Dictionary: public PropertyListType< Dictionary >
+    class Dictionary: public PropertyListType< Dictionary >
     {
         public:
             
@@ -94,7 +94,7 @@ namespace CF
             
             friend void swap( Dictionary & v1, Dictionary & v2 );
             
-            class CFPP_EXPORT Iterator: public std::iterator< std::bidirectional_iterator_tag, CF::Pair >
+            class Iterator: public std::iterator< std::bidirectional_iterator_tag, CF::Pair >
             {
                 public:
                     

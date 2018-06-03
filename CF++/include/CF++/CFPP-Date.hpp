@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT Date: public PropertyListType< Date >
+    class Date: public PropertyListType< Date >
     {
         public:
             

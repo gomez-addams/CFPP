@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT UUID: public Type
+    class UUID: public Type
     {
         public:
             

@@ -40,7 +40,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT AutoPointer: public Type
+    class AutoPointer: public Type
     {
         public:
             

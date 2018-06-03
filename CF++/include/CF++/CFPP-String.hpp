@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT String: public PropertyListType< String >
+    class String: public PropertyListType< String >
     {
         public:
             
@@ -107,7 +107,7 @@ namespace CF
             
             friend void swap( String & v1, String & v2 );
             
-            class CFPP_EXPORT Iterator: public std::iterator< std::bidirectional_iterator_tag, char >
+            class Iterator: public std::iterator< std::bidirectional_iterator_tag, char >
             {
                 public:
                     

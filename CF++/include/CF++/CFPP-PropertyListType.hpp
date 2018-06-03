@@ -41,7 +41,7 @@ namespace CF
     class Data;
     
     template < class T >
-    class CFPP_EXPORT PropertyListType: public PropertyListBase
+    class PropertyListType: public PropertyListBase
     {
         public:
             

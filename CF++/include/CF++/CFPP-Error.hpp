@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT Error: public Type
+    class Error: public Type
     {
         public:
             

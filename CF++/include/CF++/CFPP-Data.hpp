@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT Data: public PropertyListType< Data >
+    class Data: public PropertyListType< Data >
     {
         public:
             
@@ -100,7 +100,7 @@ namespace CF
             
             friend void swap( Data & v1, Data & v2 );
             
-            class CFPP_EXPORT Iterator: public std::iterator< std::bidirectional_iterator_tag, Byte >
+            class Iterator: public std::iterator< std::bidirectional_iterator_tag, Byte >
             {
                 public:
                     

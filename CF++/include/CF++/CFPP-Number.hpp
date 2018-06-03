@@ -45,7 +45,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT Number: public PropertyListType< Number >
+    class Number: public PropertyListType< Number >
     {
         public:
 

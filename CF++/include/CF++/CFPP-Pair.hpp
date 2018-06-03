@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT Pair
+    class Pair
     {
         public:
             

@@ -38,7 +38,7 @@
 
 namespace CF
 {
-    class CFPP_EXPORT ReadStream: public Type
+    class ReadStream: public Type
     {
         public:
             
@@ -86,7 +86,7 @@ namespace CF
             #pragma clang diagnostic ignored "-Wpadded"
             #endif
             
-            class CFPP_EXPORT Iterator: public std::iterator< std::forward_iterator_tag, Data >
+            class Iterator: public std::iterator< std::forward_iterator_tag, Data >
             {
                 public:
                     

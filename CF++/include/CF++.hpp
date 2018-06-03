@@ -52,16 +52,6 @@
 #pragma warning( disable: 4251 )
 #endif
 
-#ifdef _WIN32
-#ifdef CFPP_DLL_BUILD
-#define CFPP_EXPORT __declspec( dllexport )
-#else
-#define CFPP_EXPORT __declspec( dllimport )
-#endif
-#else
-#define CFPP_EXPORT     
-#endif
-
 #include <CF++/CFPP-Type.hpp>
 #include <CF++/CFPP-PropertyListBase.hpp>
 #include <CF++/CFPP-PropertyListType.hpp>

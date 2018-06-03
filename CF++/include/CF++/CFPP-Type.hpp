@@ -45,7 +45,7 @@ namespace CF
     }
     PropertyListFormat;
     
-    class CFPP_EXPORT Type
+    class Type
     {
         public:
             
